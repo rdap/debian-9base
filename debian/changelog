@@ -1,3 +1,9 @@
+9base (1:2+20071126-1) experimental; urgency=low
+
+  * Testing upstream snapshot (Closes: #421482).
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 26 Nov 2007 21:40:00 +0100
+
 9base (1:2-7) unstable; urgency=low
 
   * Reverting to last know working version (Closes: #421482).
