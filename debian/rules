@@ -5,6 +5,23 @@
 
 include /usr/share/dpatch/dpatch.make
 
+DATE=$(shell date +%Y%m%d)
+
+upstream:
+	# Needs: mercurial
+
+	# Getting sources
+	cd .. && \
+	hg clone http://www.suckless.org/cgi-bin/hgwebdir.cgi/9base && \
+	mv 9base 9base-2+$(DATE)
+
+	# Removing unused files
+	rm -rf ../9base-2+$(DATE)/.hg
+	rm -rf ../9base-2+$(DATE)/.hgtags
+
+	# Creating tarball
+	tar cfz ../9base_2+$(DATE).orig.tar.gz ../9base-2+$(DATE)
+
 build: build-stamp
 build-stamp: patch-stamp
 	dh_testdir
