@@ -37,7 +37,7 @@ clean: unpatch
 	rm -f build-stamp
 
 	# Clean package
-	-$(MAKE) clean
+	[ ! -f Makefile ] || $(MAKE) clean
 
 	dh_clean
 
@@ -51,15 +51,15 @@ install: build
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/9base PREFIX=/usr/lib/9base MANPREFIX=/usr/share/man
 
 	# Renaming manpages
-	for MANPAGE in debian/9base/usr/share/man/man1/* debian/9base/usr/share/man/man7/*; \
+	set -e; for MANPAGE in debian/9base/usr/share/man/man1/* debian/9base/usr/share/man/man7/*; \
 	do \
-		mv $$MANPAGE `dirname $$MANPAGE`/9base-`basename $$MANPAGE` || exit 1; \
+		mv $$MANPAGE `dirname $$MANPAGE`/9base-`basename $$MANPAGE`; \
 	done
 
 	# Installing lintian overrides
-	for LINTIAN in debian/lintian/*; \
+	set -e; for LINTIAN in debian/lintian/*; \
 	do \
-		install -D -m 0644 $$LINTIAN debian/`basename $$LINTIAN`/usr/share/lintian/overrides/`basename $$LINTIAN` || exit 1; \
+		install -D -m 0644 $$LINTIAN debian/`basename $$LINTIAN`/usr/share/lintian/overrides/`basename $$LINTIAN`; \
 	done
 
 binary-indep: build install

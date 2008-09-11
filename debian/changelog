@@ -1,8 +1,10 @@
-9base (1:2+20071126-1) experimental; urgency=low
+9base (1:2-8) unstable; urgency=low
 
-  * Testing upstream snapshot (Closes: #421482).
+  * Bumping to new policy.
+  * Using new homepage field in control.
+  * Don't hide make errors in clean target of rules.
 
- -- Daniel Baumann <daniel@debian.org>  Mon, 26 Nov 2007 21:40:00 +0100
+ -- Daniel Baumann <daniel@debian.org>  Sun, 23 Dec 2007 11:36:00 +0100
 
 9base (1:2-7) unstable; urgency=low
 
