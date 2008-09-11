@@ -1,0 +1,65 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+include /usr/share/dpatch/dpatch.make
+
+build: build-stamp
+build-stamp: patch
+	dh_testdir
+
+	# Building package
+	$(MAKE) LDFLAGS="" PREFIX=/usr/lib/9base MANPREFIX=/usr/share/man
+
+	touch build-stamp
+
+clean: unpatch
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+
+	# Clean package
+	-$(MAKE) clean
+
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+
+	# Installing package
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/9base PREFIX=/usr/lib/9base MANPREFIX=/usr/share/man
+
+	# Renaming manpages
+	for manpage in debian/9base/usr/share/man/man1/* debian/9base/usr/share/man/man7/*; \
+	do \
+		mv $$manpage `dirname $$manpage`/9base-`basename $$manpage` || exit 1; \
+	done
+
+	# Installing lintian overrides
+	install -D -m 644 debian/lintian debian/9base/usr/share/lintian/overrides/9base
+
+binary-indep: build install
+
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_install
+	dh_installman
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install

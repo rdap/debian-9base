@@ -1,0 +1,52 @@
+#!/bin/sh /usr/share/dpatch/dpatch-run
+## 01-manpage.dpatch by Daniel Baumann <daniel.baumann@panthera-systems.net>
+##
+## DP: Fix manpage character errors
+
+@DPATCH@
+
+diff -Naur 9base-1.orig/bc/bc.1 9base-1/bc/bc.1
+--- 9base-1.orig/bc/bc.1	2005-12-27 15:43:18.000000000 +0000
++++ 9base-1/bc/bc.1	2005-12-28 14:17:32.124437912 +0000
+@@ -159,7 +159,7 @@
+ .B ,
+ .I L
+ .B ){
+-.PD0
++.PD
+ .br
+ .B auto
+ .I L
+diff -Naur 9base-1.orig/mk/mk.1 9base-1/mk/mk.1
+--- 9base-1.orig/mk/mk.1	2005-12-27 15:43:18.000000000 +0000
++++ 9base-1/mk/mk.1	2005-12-28 14:22:28.887323096 +0000
+@@ -445,7 +445,7 @@
+ .B $nproc
+ the process slot for this recipe.
+ It satisfies
+-.RB 0≤ $nproc < $NPROC .
++.RB 0<= $nproc < $NPROC .
+ .TP
+ .B $pid
+ the process id for the
+diff -Naur 9base-1.orig/test/test.1 9base-1/test/test.1
+--- 9base-1.orig/test/test.1	2005-12-27 15:43:18.000000000 +0000
++++ 9base-1/test/test.1	2005-12-28 14:17:12.528416960 +0000
+@@ -17,7 +17,7 @@
+ .TP "\w'\fIn1 \fL-eq \fIn2\fLXX'u"
+ .BI -r " file"
+ True if the file exists (is accessible) and is readable.
+-.PD0
++.PD
+ .TP
+ .BI -w " file"
+ True if the file exists and is writable.
+@@ -146,7 +146,7 @@
+ .TP "\w'\fL( \fIexpr\fL )XX'u"
+ .B  !
+ unary negation operator
+-.PD0
++.PD
+ .TP
+ .B  -o
+ binary

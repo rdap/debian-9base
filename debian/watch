@@ -1,0 +1,4 @@
+# watch control file for uscan
+
+version=3
+http://wmii.de/download/9base-(.*)\.tar\.gz
