@@ -34,13 +34,16 @@ install: build
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/9base PREFIX=/usr/lib/9base MANPREFIX=/usr/share/man
 
 	# Renaming manpages
-	for manpage in debian/9base/usr/share/man/man1/* debian/9base/usr/share/man/man7/*; \
+	for MANPAGE in debian/9base/usr/share/man/man1/* debian/9base/usr/share/man/man7/*; \
 	do \
-		mv $$manpage `dirname $$manpage`/9base-`basename $$manpage` || exit 1; \
+		mv $$MANPAGE `dirname $$MANPAGE`/9base-`basename $$MANPAGE` || exit 1; \
 	done
 
 	# Installing lintian overrides
-	install -D -m 644 debian/lintian debian/9base/usr/share/lintian/overrides/9base
+	for LINTIAN in debian/lintian/*; \
+	do \
+		install -D -m 644 $$LINTIAN debian/`basename $$LINTIAN`/usr/share/lintian/overrides/`basename $$LINTIAN` || exit 1; \
+	done
 
 binary-indep: build install
 
@@ -50,7 +53,6 @@ binary-arch: build install
 	dh_installchangelogs
 	dh_installdocs
 	dh_install
-	dh_installman
 	dh_link
 	dh_strip
 	dh_compress

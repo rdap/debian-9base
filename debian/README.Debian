@@ -7,4 +7,4 @@ Please note that all manpages are prefixed with '9base-', you need to use:
 
 to read the manpage of the 9base awk.
 
- -- Daniel Baumann <daniel.baumann@panthera-systems.net>, Wed, 28 Dec 2005 13:32:00 +0100
+ -- Daniel Baumann <daniel@debian.org>  Wed, 28 Dec 2005 13:32:00 +0100

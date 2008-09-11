@@ -1,13 +1,25 @@
 #!/bin/sh /usr/share/dpatch/dpatch-run
-## 01-manpage.dpatch by Daniel Baumann <daniel.baumann@panthera-systems.net>
+## 01-manpage.dpatch by Daniel Baumann <daniel@debian.org>
 ##
-## DP: Fix manpage character error
+## DP: Fix manpage character error.
 
 @DPATCH@
 
-diff -Naur 9base-20060123.orig/mk/mk.1 9base-20060123/mk/mk.1
---- 9base-20060123.orig/mk/mk.1	2006-01-23 15:38:10.000000000 +0000
-+++ 9base-20060123/mk/mk.1	2006-01-24 14:55:57.835748592 +0000
+diff -Naur 9base-2.orig/dc/dc.1 9base-2/dc/dc.1
+--- 9base-2.orig/dc/dc.1	2006-01-25 14:21:14.000000000 +0000
++++ 9base-2/dc/dc.1	2006-07-04 21:40:46.000000000 +0000
+@@ -133,7 +133,7 @@
+ text
+ string on the top of the stack.
+ .TP
+-.PD0
++.PD 0
+ .BI < x
+ .TP
+ .BI > x
+diff -Naur 9base-2.orig/mk/mk.1 9base-2/mk/mk.1
+--- 9base-2.orig/mk/mk.1	2006-01-25 14:21:14.000000000 +0000
++++ 9base-2/mk/mk.1	2006-07-04 21:40:26.000000000 +0000
 @@ -445,7 +445,7 @@
  .B $nproc
  the process slot for this recipe.
