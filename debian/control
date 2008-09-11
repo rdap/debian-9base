@@ -14,4 +14,6 @@ Description: Plan 9 userland tools
  awk, basename, bc, cat, cleanname, date, dc, echo, grep, mk, rc, sed, seq,
  sleep, sort, tee, test, touch, tr, uniq, and yacc.
  .
+  Homepage: <http://www.suckless.org/>
+ .
  9base is currently only used by wmii2 (window manager improved, version 2).

@@ -1,0 +1,19 @@
+#!/bin/sh /usr/share/dpatch/dpatch-run
+## 02-kfreebsd.dpatch by Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>
+##
+## DP: Fix FTBFS on kfreebsd (Closes: #414224).
+
+@DPATCH@
+
+diff -Naur 9base-2.orig/lib9/dirread.c 9base-2/lib9/dirread.c
+--- 9base-2.orig/lib9/dirread.c	2006-01-25 14:21:14.000000000 +0000
++++ 9base-2/lib9/dirread.c	2007-03-10 07:52:59.000000000 +0000
+@@ -6,7 +6,7 @@
+ 
+ extern int _p9dir(struct stat*, struct stat*, char*, Dir*, char**, char*);
+ 
+-#if defined(__linux__)
++#if defined(__linux__) || defined(__FreeBSD_kernel__)
+ static int
+ mygetdents(int fd, struct dirent *buf, int n)
+ {

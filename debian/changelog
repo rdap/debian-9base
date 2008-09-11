@@ -1,3 +1,10 @@
+9base (2-6) unstable; urgency=low
+
+  * Added patch from Cyril Brulebois <cyril.brulebois@enst-bretagne.fr> to fix
+    FTBFS on kfreebsd (Closes: #414224).
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 10 Mar 2007 08:56:00 +0100
+
 9base (2-5) unstable; urgency=low
 
   * Added armeb and armel to the explicit architecture list (Closes: #408765).
