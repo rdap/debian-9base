@@ -1,3 +1,9 @@
+9base (1:2-7) unstable; urgency=low
+
+  * Reverting to last know working version (Closes: #421482).
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 30 Jul 2007 08:41:00 +0200
+
 9base (2+20070601-2) unstable; urgency=low
 
   * Temporarily remove s390 from architectures (Closes: #421482).
