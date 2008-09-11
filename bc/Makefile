@@ -7,3 +7,6 @@ YFILES	  = bc.y
 MANFILES  = bc.1
 
 include ../yacc.mk
+
+# Solaris
+#LDFLAGS += -dy -lxnet
