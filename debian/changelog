@@ -1,3 +1,9 @@
+9base (1+20060123-1) unstable; urgency=low
+
+  * New upstream snapshot, should fix FTBFS on most !i386 architectures.
+
+ -- Daniel Baumann <daniel.baumann@panthera-systems.net>  Tue, 24 Jan 2006 15:26:00 +0100
+
 9base (1-1) unstable; urgency=low
 
   * Initial release.
