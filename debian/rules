@@ -12,7 +12,7 @@ upstream:
 
 	# Getting sources
 	cd .. && \
-	hg clone http://www.suckless.org/cgi-bin/hgwebdir.cgi/9base && \
+	hg clone http://www.suckless.org/hg.rc/9base && \
 	mv 9base 9base-2+$(DATE)
 
 	# Removing unused files
