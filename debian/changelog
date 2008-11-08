@@ -1,3 +1,17 @@
+9base (1:2-9) unstable; urgency=low
+
+  * Adding version 2+20071126-1 to debian changelog.
+  * Upgrading package to debhelper 7.
+  * Upgrading package to standards 3.8.0.
+  * Adding vcs fields in control.
+  * Replacing obsolete dh_clean -k with dh_prep.
+  * Removing watch file.
+  * Using lintian debhelper to install lintian overrides.
+  * Reordering rules file.
+  * Rewriting copyright file in machine-interpretable format.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat,  8 Nov 2008 08:08:00 +0100
+
 9base (1:2-8) unstable; urgency=low
 
   * Bumping to new policy.
