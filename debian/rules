@@ -25,7 +25,7 @@ install: build
 	dh_prep
 	dh_installdirs
 
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/9base PREFIX=/usr/lib/9base MANPREFIX=/usr/share/man
+	$(MAKE) DESTDIR=$(CURDIR)/debian/9base PREFIX=/usr/lib/9base MANPREFIX=/usr/share/man install
 
 	set -e; for MANPAGE in debian/9base/usr/share/man/man1/* debian/9base/usr/share/man/man7/*; \
 	do \
