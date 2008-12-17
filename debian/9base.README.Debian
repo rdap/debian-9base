@@ -3,7 +3,7 @@
 
 Please note that all manpages are prefixed with '9base-', you need to use:
 
-	$ man 9base-awk
+  $ man 9base-awk
 
 to read the manpage of the 9base awk.
 
