@@ -1,0 +1,15 @@
+Author: Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>
+Description: Fixing FTBFS on kfreebsd (Closes: #414224).
+
+diff -Naurp 9base.orig/lib9/dirread.c 9base/lib9/dirread.c
+--- 9base.orig/lib9/dirread.c	2008-10-19 14:41:11.000000000 +0000
++++ 9base/lib9/dirread.c	2008-12-17 19:51:01.000000000 +0000
+@@ -6,7 +6,7 @@
+ 
+ extern int _p9dir(struct stat*, struct stat*, char*, Dir*, char**, char*);
+ 
+-#if defined(__linux__)
++#if defined(__linux__) || defined(__FreeBSD_kernel__)
+ static int
+ mygetdents(int fd, struct dirent *buf, int n)
+ {
