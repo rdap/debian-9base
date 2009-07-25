@@ -3,7 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: Daniel Baumann <daniel@debian.org>
 Build-Depends: debhelper (>= 7), quilt
-Standards-Version: 3.8.0
+Standards-Version: 3.8.2
 Homepage: http://www.suckless.org/
 Vcs-Browser: http://git.debian.net/?p=debian/9base.git
 Vcs-Git: git://git.debian.net/git/debian/9base.git
