@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+SHELL := sh -e
+
 include /usr/share/quilt/quilt.make
 
 clean: unpatch
@@ -23,18 +25,17 @@ install: build
 	dh_testdir
 	dh_testroot
 	dh_prep
-	dh_installdirs
 
 	$(MAKE) DESTDIR=$(CURDIR)/debian/9base PREFIX=/usr/lib/9base MANPREFIX=/usr/share/man install
 
-	set -e; for MANPAGE in debian/9base/usr/share/man/man1/* debian/9base/usr/share/man/man7/*; \
+	for MANPAGE in debian/9base/usr/share/man/man1/* debian/9base/usr/share/man/man7/*; \
 	do \
 		mv $$MANPAGE `dirname $$MANPAGE`/9base-`basename $$MANPAGE`; \
 	done
 
 binary: binary-arch
 
-binary-arch: build install
+binary-arch: install
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs
