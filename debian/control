@@ -10,7 +10,7 @@ Vcs-Git: git://git.debian.net/git/debian/9base.git
 
 Package: 9base
 Architecture: alpha amd64 armel hppa hurd-i386 i386 kfreebsd-amd64 kfreebsd-i386 mips mipsel powerpc s390 sparc
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Suggests: 9mount, wmii2
 Description: Plan 9 userland tools
  9base is a port of following original Plan 9 userland tools to Unix:
