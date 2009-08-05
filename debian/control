@@ -9,7 +9,7 @@ Vcs-Browser: http://git.debian.net/?p=debian/9base.git
 Vcs-Git: git://git.debian.net/git/debian/9base.git
 
 Package: 9base
-Architecture: alpha amd64 arm armeb armel hppa hurd-i386 i386 m68k mips mipsel powerpc s390 sparc kfreebsd-amd64 kfreebsd-i386
+Architecture: alpha amd64 armel hppa hurd-i386 i386 kfreebsd-amd64 kfreebsd-i386 mips mipsel powerpc s390 sparc
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Suggests: 9mount, wmii2
 Description: Plan 9 userland tools
