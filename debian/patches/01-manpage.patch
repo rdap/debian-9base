@@ -2,8 +2,8 @@ Author: Daniel Baumann <daniel@debian.org>
 Description: Fixing manpage character error.
 
 diff -Naurp 9base.orig/dc/dc.1 9base/dc/dc.1
---- 9base.orig/dc/dc.1	2008-10-19 14:41:11.000000000 +0000
-+++ 9base/dc/dc.1	2008-12-17 19:50:39.000000000 +0000
+--- 9base.orig/dc/dc.1	2009-08-03 09:15:16.000000000 +0000
++++ 9base/dc/dc.1	2009-08-05 08:17:25.000000000 +0000
 @@ -133,7 +133,7 @@ Put the bracketed
  text
  string on the top of the stack.
@@ -13,15 +13,3 @@ diff -Naurp 9base.orig/dc/dc.1 9base/dc/dc.1
  .BI < x
  .TP
  .BI > x
-diff -Naurp 9base.orig/mk/mk.1 9base/mk/mk.1
---- 9base.orig/mk/mk.1	2008-10-19 14:41:11.000000000 +0000
-+++ 9base/mk/mk.1	2008-12-17 19:50:39.000000000 +0000
-@@ -445,7 +445,7 @@ contains only the name of the members.
- .B $nproc
- the process slot for this recipe.
- It satisfies
--.RB 0≤ $nproc < $NPROC .
-+.RB 0<= $nproc < $NPROC .
- .TP
- .B $pid
- the process id for the
