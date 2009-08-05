@@ -20,7 +20,7 @@
   * Reordering rules file.
   * Rewriting copyright file in machine-interpretable format.
 
- -- Daniel Baumann <daniel@debian.org>  Sat,  8 Nov 2008 08:08:00 +0100
+ -- Daniel Baumann <daniel@debian.org>  Sat, 08 Nov 2008 08:08:00 +0100
 
 9base (1:2-8) unstable; urgency=low
 
@@ -52,13 +52,13 @@
 
   * New upstream snapshot.
 
- -- Daniel Baumann <daniel@debian.org>  Fri,  1 Jun 2007 18:59:00 +0200
+ -- Daniel Baumann <daniel@debian.org>  Fri, 01 Jun 2007 18:59:00 +0200
 
 9base (2+20070501-1) unstable; urgency=low
 
   * New upstream snapshot.
 
- -- Daniel Baumann <daniel@debian.org>  Tue,  1 May 2007 08:52:00 +0200
+ -- Daniel Baumann <daniel@debian.org>  Tue, 01 May 2007 08:52:00 +0200
 
 9base (2+20070429-1) unstable; urgency=low
 
@@ -95,7 +95,7 @@
 
   * New email address.
 
- -- Daniel Baumann <daniel@debian.org>  Tue,  4 Jul 2006 23:27:00 +0200
+ -- Daniel Baumann <daniel@debian.org>  Tue, 04 Jul 2006 23:27:00 +0200
 
 9base (2-1) unstable; urgency=low
 
