@@ -1,3 +1,9 @@
+9base (1:3-2) unstable; urgency=low
+
+  * Adding patch to adjust rc to debian specific filesystem location.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 08 Aug 2009 18:13:08 +0200
+
 9base (1:3-1) unstable; urgency=low
 
   * Upgrading package to standards version 3.8.2.
