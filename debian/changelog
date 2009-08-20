@@ -1,3 +1,12 @@
+9base (1:3-3) unstable; urgency=low
+
+  * Updating maintainer field.
+  * Updating vcs fields.
+  * Updating package to standards version 3.8.3.
+  * Updatin variables writing in rules to consistent style.
+
+ -- Daniel Baumann <daniel@debian.org>  Thu, 20 Aug 2009 17:34:06 +0200
+
 9base (1:3-2) unstable; urgency=low
 
   * Adding patch to adjust rc to debian specific filesystem location.
