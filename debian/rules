@@ -13,5 +13,5 @@ override_dh_auto_install:
 
 	for MANPAGE in debian/9base/usr/share/man/man1/* debian/9base/usr/share/man/man7/*; \
 	do \
-		mv $$MANPAGE `dirname $$MANPAGE`/9base-`basename $$MANPAGE`; \
+		mv $${MANPAGE} `dirname $${MANPAGE}`/9base-`basename $${MANPAGE}`; \
 	done
