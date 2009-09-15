@@ -1,10 +1,10 @@
 9base for Debian
 ----------------
 
-Please note that all manpages are prefixed with '9base-', you need to use:
+Please note that all manpages are prefixed with 'plan9-', you need to use:
 
-  $ man 9base-awk
+  $ man plan9-awk
 
-to read the manpage of the 9base awk.
+to read the manpage of the plan9 awk.
 
  -- Daniel Baumann <daniel@debian.org>  Wed, 28 Dec 2005 13:32:00 +0100
