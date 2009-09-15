@@ -11,7 +11,7 @@ Vcs-Git: git://git.debian-maintainers.org/git/suckless/9base.git
 XSBC-Maintainer-Homepage: http://suckless.debian-maintainers.org/
 
 Package: 9base
-Architecture: alpha amd64 armel hppa hurd-i386 i386 kfreebsd-amd64 kfreebsd-i386 mips mipsel powerpc s390 sparc
+Architecture: alpha amd64 armel hppa hurd-i386 i386 kfreebsd-amd64 kfreebsd-i386 mips mipsel powerpc s390 sh4 sparc
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Suggests: 9mount, wmii2
 Description: Plan 9 userland tools
