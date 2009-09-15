@@ -1,1 +1,1 @@
-9base: executable-not-elf-or-script ./usr/lib/9base/etc/rcmain
+9base: executable-not-elf-or-script ./usr/lib/plan9/etc/rcmain

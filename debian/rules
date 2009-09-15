@@ -6,10 +6,10 @@ SHELL := sh -e
 	dh ${@} --with quilt
 
 override_dh_auto_build:
-	$(MAKE) LDFLAGS="" PREFIX=/usr/lib/9base MANPREFIX=/usr/share/man
+	$(MAKE) LDFLAGS="" PREFIX=/usr/lib/plan9 MANPREFIX=/usr/share/man
 
 override_dh_auto_install:
-	$(MAKE) DESTDIR=$(CURDIR)/debian/9base PREFIX=/usr/lib/9base MANPREFIX=/usr/share/man install
+	$(MAKE) DESTDIR=$(CURDIR)/debian/9base PREFIX=/usr/lib/plan9 MANPREFIX=/usr/share/man install
 
 	for MANPAGE in debian/9base/usr/share/man/man*/*; \
 	do \

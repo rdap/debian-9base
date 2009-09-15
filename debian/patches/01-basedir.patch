@@ -9,7 +9,7 @@ diff -Naurp 9base.orig/rc/plan9ish.c 9base/rc/plan9ish.c
  Rcmain(void)
  {
 -	return unsharp("#9/etc/rcmain");
-+	return unsharp("/usr/lib/9base/etc/rcmain");
++	return unsharp("/usr/lib/plan9/etc/rcmain");
  }
  
  char Fdprefix[]="/dev/fd/";
