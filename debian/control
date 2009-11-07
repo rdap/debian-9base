@@ -3,7 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: Debian Suckless Maintainers <suckless@lists.debian-maintainers.org>
 Uploaders: Daniel Baumann <daniel@debian.org>
-Build-Depends: debhelper (>= 7.0.50~), quilt
+Build-Depends: debhelper (>= 7.0.50~), quilt (>= 0.46-7)
 Standards-Version: 3.8.3
 Homepage: http://tools.suckless.org/9base/
 Vcs-Browser: http://git.debian-maintainers.org/?p=suckless/9base.git
