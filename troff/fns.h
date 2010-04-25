@@ -1,5 +1,7 @@
 #define getline p9getline
 
+#include "mbwc.h"
+
 /*
  * other
  */
