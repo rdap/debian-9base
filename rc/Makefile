@@ -38,7 +38,7 @@ install: ${TARG}
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/${TARG}
-	rm -f ${DESTDIR}${PREFIX}/man1/${MANFILES}
+	rm -f ${DESTDIR}${MANPREFIX}/man1/${MANFILES}
 	rm -f ${DESTDIR}${PREFIX}/etc/rcmain
 
 .c.o:
@@ -46,7 +46,7 @@ uninstall:
 	@${CC} ${CFLAGS} -I../lib9 -I${PREFIX}/include -I../lib9 $*.c
 
 clean:
-	rm -f ${OFILES} ${TARG} y.tab.c y.tab.h
+	rm -f ${OFILES} ${TARG} y.tab.c y.tab.h x.tab.h
 
 ${TARG}: ${OFILES}
 	@echo LD ${TARG}
