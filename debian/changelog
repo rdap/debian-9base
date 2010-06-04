@@ -1,3 +1,10 @@
+9base (1:6-1) unstable; urgency=low
+
+  * Adding Kai as co-maintainer.
+  * Merging upstream version 6.
+
+ -- Daniel Baumann <daniel@debian.org>  Fri, 04 Jun 2010 17:22:03 +0200
+
 9base (1:5-1) unstable; urgency=low
 
   [ Daniel Baumann ]
