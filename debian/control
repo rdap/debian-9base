@@ -12,7 +12,7 @@ Vcs-Git: git://git.debian-maintainers.org/git/suckless/9base.git
 Package: 9base
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Suggests: 9mount, wmii2
+Suggests: wmii2
 Description: Plan 9 userland tools
  9base is a port of following original Plan 9 userland tools to Unix:
  awk, basename, bc, cat, cleanname, date, dc, echo, grep, mk, rc, sed, seq,
