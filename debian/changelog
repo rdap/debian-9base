@@ -1,3 +1,13 @@
+9base (1:6-2) experimental; urgency=low
+
+  * Updating standards version to 3.9.0.
+  * Updating to standards version 3.9.1.
+  * Building on all architectures again, appears to build on ia64 again
+    (Closes: #599952).
+  * Removing suggest to 9mount.
+
+ -- Daniel Baumann <daniel@debian.org>  Sun, 17 Oct 2010 21:51:20 +0200
+
 9base (1:6-1) unstable; urgency=low
 
   * Adding Kai as co-maintainer.
