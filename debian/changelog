@@ -1,3 +1,11 @@
+9base (1:6-3) experimental; urgency=low
+
+  * Updating package to debhelper 8.
+  * Switching to source format 3.0 (quilt).
+  * Updating variable handing in rules.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 13 Nov 2010 09:57:39 +0100
+
 9base (1:6-2) experimental; urgency=low
 
   * Updating standards version to 3.9.0.
