@@ -6,14 +6,14 @@ SHELL := sh -e
 	dh ${@}
 
 override_dh_auto_build:
-	$(MAKE) LDFLAGS="" PREFIX=/usr/lib/plan9 MANPREFIX=/usr/share/man
+	dh_auto_build -- LDFLAGS="" PREFIX=/usr/lib/plan9 MANPREFIX=/usr/share/man
 
 override_dh_auto_install:
-	$(MAKE) DESTDIR=$(CURDIR)/debian/9base PREFIX=/usr/lib/plan9 MANPREFIX=/usr/share/man install
+	dh_auto_install -- DESTDIR=$(CURDIR)/debian/9base PREFIX=/usr/lib/plan9 MANPREFIX=/usr/share/man
 
 	for MANPAGE in debian/9base/usr/share/man/man*/*; \
 	do \
-		mv $${MANPAGE} `dirname $${MANPAGE}`/plan9-`basename $${MANPAGE}`; \
+		mv $${MANPAGE} $$(dirname $${MANPAGE})/plan9-$$(basename $${MANPAGE}); \
 	done
 
 override_dh_fixperms:
