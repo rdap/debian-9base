@@ -1,8 +1,3 @@
-Upstream-Contact: Suckless project <dev@suckless.org>
-Upstream-Homepage: http://tools.suckless.org/9base/
-Maintainer-Contact: Debian Suckless Maintainers <suckless@lists.debian-maintainers.org>
-Maintainer-Homepage: http://suckless.debian-maintainers.org/
-
 Files: *
 Copyright: (C) 2005-2009 Anselm R. Garbe <garbeam@gmail.com>
 License: MIT

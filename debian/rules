@@ -3,7 +3,7 @@
 SHELL := sh -e
 
 %:
-	dh ${@} --with quilt
+	dh ${@}
 
 override_dh_auto_build:
 	$(MAKE) LDFLAGS="" PREFIX=/usr/lib/plan9 MANPREFIX=/usr/share/man
