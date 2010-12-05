@@ -1,13 +1,12 @@
 Source: 9base
 Section: utils
 Priority: optional
-Maintainer: Debian Suckless Maintainers <suckless@lists.debian-maintainers.org>
-Uploaders: Daniel Baumann <daniel@debian.org>, Kai Hendry <hendry@iki.fi>
 Build-Depends: debhelper (>= 8)
+Maintainer: Kai Hendry <hendry@iki.fi>
 Standards-Version: 3.9.1
-Homepage: http://tools.suckless.org/9base/
-Vcs-Browser: http://git.debian-maintainers.org/?p=suckless/9base.git
-Vcs-Git: git://git.debian-maintainers.org/git/suckless/9base.git
+Homepage: http://tools.suckless.org/9base
+Vcs-Browser: http://git.webconverger.org/?p=9base
+Vcs-Git: git://webconverger.org/git/public/9base
 
 Package: 9base
 Architecture: any
@@ -18,4 +17,3 @@ Description: Plan 9 userland tools
  awk, basename, bc, cat, cleanname, date, dc, echo, grep, mk, rc, sed, seq,
  sleep, sort, tee, test, touch, tr, uniq, and yacc.
  .
- 9base is currently only used by wmii2 (window manager improved, version 2).
