@@ -1,5 +1,8 @@
-9base: wrong-path-for-interpreter ./usr/lib/plan9/lib/troff/font/devutf/mkMAP (#!/usr/lib/plan9/bin/rc != /usr/bin/rc)
-9base: missing-dep-for-interpreter rc => rc (./usr/lib/plan9/lib/troff/font/devutf/mkMAP)
-9base: wrong-path-for-interpreter ./usr/lib/plan9/lib/troff/tmac/sendcover (#!/usr/lib/plan9/bin/rc != /usr/bin/rc)
-9base: missing-dep-for-interpreter rc => rc (./usr/lib/plan9/lib/troff/tmac/sendcover)
-9base: executable-not-elf-or-script ./usr/lib/plan9/etc/rcmain
+# We use the rc shipped with the package, not the separately packaged one.
+9base: wrong-path-for-interpreter usr/lib/plan9/lib/troff/font/devutf/mkMAP (#!/usr/lib/plan9/bin/rc != /usr/bin/rc)
+9base: missing-dep-for-interpreter rc => rc (usr/lib/plan9/lib/troff/font/devutf/mkMAP)
+9base: wrong-path-for-interpreter usr/lib/plan9/lib/troff/tmac/sendcover (#!/usr/lib/plan9/bin/rc != /usr/bin/rc)
+9base: missing-dep-for-interpreter rc => rc (usr/lib/plan9/lib/troff/tmac/sendcover)
+
+# This is a startup script
+9base: executable-not-elf-or-script usr/lib/plan9/etc/rcmain
