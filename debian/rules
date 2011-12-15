@@ -11,6 +11,8 @@ override_dh_auto_build:
 override_dh_auto_install:
 	dh_auto_install -- DESTDIR=$(CURDIR)/debian/9base PREFIX=/usr/lib/plan9 MANPREFIX=/usr/share/man
 
+	mv debian/9base/usr/share/man/man1/getflags.1 \
+	   debian/9base/usr/share/man/man8/getflags.8
 	for MANPAGE in debian/9base/usr/share/man/man*/*; \
 	do \
 		mv $${MANPAGE} $$(dirname $${MANPAGE})/plan9-$$(basename $${MANPAGE}); \
