@@ -345,7 +345,10 @@ License: GPL-2
  can be found in /usr/share/common-licenses/GPL-2 file.
 
 Files: debian/*
-Copyright: (C) 2005-2010 Daniel Baumann <daniel@debian.org>
+Copyright:
+ (C) 2005-2010 Daniel Baumann <daniel@debian.org>
+ (C) 2010 Kai Hendry <hendry@iki.fi>
+ (C) 2011 Gergely Nagy <algernon@madhouse-project.org>
 License: MIT
  Permission is hereby granted, free of charge, to any person obtaining a
  copy of this software and associated documentation files (the "Software"),

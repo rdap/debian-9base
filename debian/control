@@ -1,12 +1,12 @@
 Source: 9base
 Section: utils
 Priority: optional
-Build-Depends: debhelper (>= 8)
-Maintainer: Kai Hendry <hendry@iki.fi>
-Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 8~)
+Maintainer: Gergely Nagy <algernon@madhouse-project.org>
+Standards-Version: 3.9.2
 Homepage: http://tools.suckless.org/9base
-Vcs-Browser: http://git.webconverger.org/?p=9base
-Vcs-Git: git://webconverger.org/git/public/9base
+Vcs-Browser: http://git.madhouse-project.org/debian/9base/
+Vcs-Git: git://git.madhouse-project.org/debian/9base.git
 
 Package: 9base
 Architecture: any
@@ -16,4 +16,3 @@ Description: Plan 9 userland tools
  9base is a port of following original Plan 9 userland tools to Unix:
  awk, basename, bc, cat, cleanname, date, dc, echo, grep, mk, rc, sed, seq,
  sleep, sort, tee, test, touch, tr, uniq, and yacc.
- .
