@@ -3,8 +3,10 @@
   * New maintainer (Closes: #647092).
   * Include 'strings' in the long description (Closes: #622177).
   * Remove empty manual pages: better no manpages than an empty one.
+  * Fix the troff macros to look for include files at the right location.
+  * Update README.Debian, to show how to display the plan9 man pages properly.
 
- -- Gergely Nagy <algernon@madhouse-project.org>  Thu, 15 Dec 2011 13:34:51 +0100
+ -- Gergely Nagy <algernon@madhouse-project.org>  Thu, 15 Dec 2011 14:15:57 +0100
 
 9base (1:6-4) unstable; urgency=low
 

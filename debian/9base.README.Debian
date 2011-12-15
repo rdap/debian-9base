@@ -1,10 +1,9 @@
 9base for Debian
 ----------------
 
-Please note that all manpages are prefixed with 'plan9-', you need to use:
+Please note that all manpages are prefixed with 'plan9-', and are
+typeset with the plan9 macro package, so you need to use:
 
-  $ man plan9-awk
+  $ zcat /usr/share/man/man1/plan9-awk.1.gz | /usr/lib/plan9/bin/troff -N -man
 
 to read the manpage of the plan9 awk.
-
- -- Daniel Baumann <daniel@debian.org>  Wed, 28 Dec 2005 13:32:00 +0100
