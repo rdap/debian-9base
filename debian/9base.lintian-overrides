@@ -6,3 +6,10 @@
 
 # This is a startup script
 9base: executable-not-elf-or-script usr/lib/plan9/etc/rcmain
+
+# Manual pages use the plan9 man macro package.
+# Therefore, they will not validate with Debian's man macros, or
+# groff. They render just fine with the appropriate macro package and
+# plan9-troff.
+9base: manpage-has-errors-from-man usr/share/man/man*/plan9-*
+9base: hyphen-used-as-minus-sign usr/share/man/man*/plan9-*
