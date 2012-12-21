@@ -1,0 +1,25 @@
+From: Gergely Nagy <algernon@madhouse-project.org>
+Date: Fri, 21 Dec 2012 14:29:48 +0100
+Subject: troff: Mention the correct macro package path in troff(1)
+
+In the Debian packaging, troff macro files are under
+/usr/share/9base/troff/tmac/.
+
+Signed-off-by: Gergely Nagy <algernon@madhouse-project.org>
+---
+ troff/troff.1 |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/troff/troff.1 b/troff/troff.1
+index 7af3f3c..e87868e 100644
+--- a/troff/troff.1
++++ b/troff/troff.1
+@@ -63,7 +63,7 @@ Number first generated page
+ .TP
+ .BI -m name
+ Process the macro file
+-.BI /sys/lib/tmac/tmac. name
++.BI /usr/share/9base/troff/tmac/tmac. name
+ before the input
+ .IR files .
+ .TP

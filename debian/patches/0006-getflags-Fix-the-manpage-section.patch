@@ -1,0 +1,24 @@
+From: Gergely Nagy <algernon@madhouse-project.org>
+Date: Fri, 21 Dec 2012 14:31:40 +0100
+Subject: getflags: Fix the manpage section
+
+The manual page has an extension that indicates section one, yet the
+header puts it in 8. There's no reason for it to be there, so fix the
+header to indicate section 1 instead.
+
+Reported-by: Sergey Romanov <schragge@gmail.com>
+Signed-off-by: Gergely Nagy <algernon@madhouse-project.org>
+---
+ getflags/getflags.1 |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/getflags/getflags.1 b/getflags/getflags.1
+index 50274d4..1734787 100644
+--- a/getflags/getflags.1
++++ b/getflags/getflags.1
+@@ -1,4 +1,4 @@
+-.TH GETFLAGS 8
++.TH GETFLAGS 1
+ .SH NAME
+ getflags, usage \- command-line parsing for shell scripts
+ .SH SYNOPSIS

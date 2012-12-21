@@ -1,4 +1,7 @@
-0001-troff-Replace-9-with-usr-lib-plan9-lib-troff-in-the-.patch
-0002-01-basedir.patch.patch
-0003-02-shebang.patch.patch
+0001-troff-Replace-9-with-usr-share-9base-troff-in-the-va.patch
+0002-Search-for-rcmain-in-usr-lib-plan9-etc-rcmain.patch
+0003-Use-usr-lib-plan9-bin-rc-instead-of-bin-rc.patch
 0004-9base-Set-FD_CLOEXEC-correctly-using-F_SETFD-not-F_S.patch
+0005-troff-Mention-the-correct-macro-package-path-in-trof.patch
+0006-getflags-Fix-the-manpage-section.patch
+0007-troff-Make-the-9-macro-point-to-a-useful-location.patch

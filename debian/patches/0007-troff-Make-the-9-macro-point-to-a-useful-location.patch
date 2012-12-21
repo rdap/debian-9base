@@ -1,0 +1,26 @@
+From: Gergely Nagy <algernon@madhouse-project.org>
+Date: Fri, 21 Dec 2012 14:35:49 +0100
+Subject: troff: Make the *9 macro point to a useful location
+
+The *9 macro, used to point to 9base sources was pointing to a local
+user's home. Instead, point it to swtch.com/usr/local/plan9 instead.
+
+Reported-by: Sergey Romanov <schragge@gmail.com>
+Signed-off-by: Gergely Nagy <algernon@madhouse-project.org>
+---
+ troff/tmac/tmac.an |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/troff/tmac/tmac.an b/troff/tmac/tmac.an
+index fbd6198..0b41adb 100644
+--- a/troff/tmac/tmac.an
++++ b/troff/tmac/tmac.an
+@@ -3,7 +3,7 @@
+ .fp 3 B LuxiSans-Bold
+ .fp 4 BI LuxiSans-BoldOblique
+ .fp 5 L LuxiMono
+-.ds 9 /home/anselm/plan9port
++.ds 9 http://swtch.com/usr/local/plan9
+ .if n .uf 4
+ .if n .bd 3
+ .if n .rm bd

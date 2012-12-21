@@ -1,8 +1,8 @@
 From: Gergely Nagy <algernon@balabit.hu>
-Date: Thu, 15 Dec 2011 14:07:21 +0100
-Subject: troff: Replace #9 with /usr/lib/plan9/lib/troff in the various
- paths.
+Date: Fri, 21 Dec 2012 14:37:08 +0100
+Subject: troff: Replace #9 with /usr/share/9base/troff in the various paths.
 
+Signed-off-by: Gergely Nagy <algernon@madhouse-project.org>
 ---
  troff/tmac/mmn      |    2 +-
  troff/tmac/mmt      |    2 +-
@@ -13,7 +13,7 @@ Subject: troff: Replace #9 with /usr/lib/plan9/lib/troff in the various
  6 files changed, 7 insertions(+), 7 deletions(-)
 
 diff --git a/troff/tmac/mmn b/troff/tmac/mmn
-index fab3973..124301d 100644
+index fab3973..bea2df4 100644
 --- a/troff/tmac/mmn
 +++ b/troff/tmac/mmn
 @@ -24,7 +24,7 @@
@@ -21,12 +21,12 @@ index fab3973..124301d 100644
  .nr!9 0
  .nr!M 0
 -.so #9/tmac/strings.mm
-+.so /usr/lib/plan9/lib/troff/tmac/strings.mm
++.so /usr/share/9base/troff/tmac/strings.mm
  .if\*(]S .ds ]S \*(}Z
  .dsBU \(bu
  .dsEM \%--
 diff --git a/troff/tmac/mmt b/troff/tmac/mmt
-index c3c9c7d..9de4f65 100644
+index c3c9c7d..5ef32dd 100644
 --- a/troff/tmac/mmt
 +++ b/troff/tmac/mmt
 @@ -23,7 +23,7 @@
@@ -34,12 +34,12 @@ index c3c9c7d..9de4f65 100644
  .nr!9 0
  .nr!M 0
 -.so #9/tmac/strings.mm
-+.so /usr/lib/plan9/lib/troff/tmac/strings.mm
++.so /usr/share/9base/troff/tmac/strings.mm
  .if\*(]S .ds ]S \s14\f3\*(}Z\fP\s0
  .dsBU \s-2\(bu\s0
  .dsEM \(em
 diff --git a/troff/tmac/tmac.e b/troff/tmac/tmac.e
-index 8e52976..68000f0 100644
+index 8e52976..c79ce55 100644
 --- a/troff/tmac/tmac.e
 +++ b/troff/tmac/tmac.e
 @@ -918,7 +918,7 @@
@@ -47,39 +47,39 @@ index 8e52976..68000f0 100644
  .nr $m 1
  .nr $s 4n
 -.ds || #9/tmac/me
-+.ds || /usr/lib/plan9/lib/troff/tmac/me
++.ds || /usr/share/9base/troff/tmac/me
  .bd S B 3
  .ds [ \u\x'-0.25v'
  .ds ] \d
 diff --git a/troff/tmac/tmac.m b/troff/tmac/tmac.m
-index 061b6d0..74bc99a 100644
+index 061b6d0..05c0ef3 100644
 --- a/troff/tmac/tmac.m
 +++ b/troff/tmac/tmac.m
 @@ -1,3 +1,3 @@
  '''\"	TMAC.M @(#)tmacs.src	1.7
 -.if n .so #9/tmac/mmn
 -.if t .so #9/tmac/mmt
-+.if n .so /usr/lib/plan9/lib/troff/tmac/mmn
-+.if t .so /usr/lib/plan9/lib/troff/tmac/mmt
++.if n .so /usr/share/9base/troff/tmac/mmn
++.if t .so /usr/share/9base/troff/tmac/mmt
 diff --git a/troff/tmac/tmac.s b/troff/tmac/tmac.s
-index 6f11186..a506e9e 100644
+index 6f11186..c69aa49 100644
 --- a/troff/tmac/tmac.s
 +++ b/troff/tmac/tmac.s
 @@ -1,5 +1,5 @@
  .lg 0
 -.ds sd #9/tmac
-+.ds sd /usr/lib/plan9/lib/troff/tmac
++.ds sd /usr/share/9base/troff/tmac
  .\"	RT -  reset everything to normal state
  .de RT
  .if \\n(CS \{\
 diff --git a/troff/tmac/tmac.spe b/troff/tmac/tmac.spe
-index ea77323..8cc8e28 100644
+index ea77323..b8d4812 100644
 --- a/troff/tmac/tmac.spe
 +++ b/troff/tmac/tmac.spe
 @@ -1,5 +1,5 @@
  ..... July 1, 1991
 -.so #9/tmac/tmac.pm
-+.so /usr/lib/plan9/lib/troff/tmac/tmac.pm
++.so /usr/share/9base/troff/tmac/tmac.pm
  .
  .ig
  .nr VN 1	\" VN -- volume

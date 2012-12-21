@@ -1,6 +1,6 @@
 From: Kai Hendry <hendry@iki.fi>
 Date: Thu, 15 Dec 2011 13:09:19 +0100
-Subject: 02-shebang.patch
+Subject: Use /usr/lib/plan9/bin/rc instead of /bin/rc
 
 ---
  troff/font/devutf/mkMAP |    2 +-
