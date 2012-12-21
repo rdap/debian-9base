@@ -2,8 +2,10 @@
 
   * Add a watch file, thanks to Andy Simpkins <andy-debian@koipond.org.uk>
     (Closes: #695163)
+  * Use F_SETFD instead of F_SETFL to set FD_CLOEXEC, patch from Guillem
+    Jover <guillem@debian.org> (Closes: #696247)
 
- -- Gergely Nagy <algernon@madhouse-project.org>  Fri, 21 Dec 2012 13:21:20 +0100
+ -- Gergely Nagy <algernon@madhouse-project.org>  Fri, 21 Dec 2012 13:30:12 +0100
 
 9base (1:6-5) unstable; urgency=low
 

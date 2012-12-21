@@ -1,0 +1,4 @@
+0001-troff-Replace-9-with-usr-lib-plan9-lib-troff-in-the-.patch
+0002-01-basedir.patch.patch
+0003-02-shebang.patch.patch
+0004-9base-Set-FD_CLOEXEC-correctly-using-F_SETFD-not-F_S.patch

@@ -1,0 +1,41 @@
+From: Guillem Jover <guillem@hadrons.org>
+Date: Tue, 18 Dec 2012 17:25:40 +0100
+Subject: 9base: Set FD_CLOEXEC correctly using F_SETFD not F_SETFL
+
+Using that value on F_SETFL is just wrong, and might make the call fail
+on some systems, as it's requesting to set an undetermined flag. For
+example on GNU/* FD_CLOEXEC has value 1, which matches with O_WRONLY.
+
+This might cause the code to at least leak file descriptors, and at worst
+to terminate execution.
+---
+ lib9/create.c |    2 +-
+ lib9/open.c   |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/lib9/create.c b/lib9/create.c
+index e4e3c71..4d9ae10 100644
+--- a/lib9/create.c
++++ b/lib9/create.c
+@@ -67,7 +67,7 @@ out:
+ 			}
+ 		}
+ 		if(cexec)
+-			fcntl(fd, F_SETFL, FD_CLOEXEC);
++			fcntl(fd, F_SETFD, FD_CLOEXEC);
+ 		if(rclose)
+ 			remove(path);
+ 	}
+diff --git a/lib9/open.c b/lib9/open.c
+index a0573ae..e21a5b4 100644
+--- a/lib9/open.c
++++ b/lib9/open.c
+@@ -54,7 +54,7 @@ p9open(char *name, int mode)
+ 			}
+ 		}
+ 		if(cexec)
+-			fcntl(fd, F_SETFL, FD_CLOEXEC);
++			fcntl(fd, F_SETFD, FD_CLOEXEC);
+ 		if(rclose)
+ 			remove(name);
+ 	}

@@ -1,0 +1,29 @@
+From: Kai Hendry <hendry@iki.fi>
+Date: Thu, 15 Dec 2011 13:09:19 +0100
+Subject: 02-shebang.patch
+
+---
+ troff/font/devutf/mkMAP |    2 +-
+ troff/tmac/sendcover    |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/troff/font/devutf/mkMAP b/troff/font/devutf/mkMAP
+index d7f0d5d..30d0246 100644
+--- a/troff/font/devutf/mkMAP
++++ b/troff/font/devutf/mkMAP
+@@ -1,4 +1,4 @@
+-#!/bin/rc
++#!/usr/lib/plan9/bin/rc
+ grep '	' $* | awk '
+ $2 != "\"" {last = $4}
+ {printf("\t%s\t%s\n", $1, last)}
+diff --git a/troff/tmac/sendcover b/troff/tmac/sendcover
+index bb17c13..80de77c 100644
+--- a/troff/tmac/sendcover
++++ b/troff/tmac/sendcover
+@@ -1,4 +1,4 @@
+-#!/bin/rc
++#!/usr/lib/plan9/bin/rc
+ T=/tmp/cs$pid
+ cstrans $T $1
+ rc $T

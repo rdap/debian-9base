@@ -1,0 +1,21 @@
+From: Kai Hendry <hendry@iki.fi>
+Date: Thu, 15 Dec 2011 13:09:19 +0100
+Subject: 01-basedir.patch
+
+---
+ rc/plan9ish.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/rc/plan9ish.c b/rc/plan9ish.c
+index 269d124..f9a43ef 100644
+--- a/rc/plan9ish.c
++++ b/rc/plan9ish.c
+@@ -27,7 +27,7 @@ char *syssigname[]={
+ char*
+ Rcmain(void)
+ {
+-	return unsharp("#9/etc/rcmain");
++	return unsharp("/usr/lib/plan9/etc/rcmain");
+ }
+ 
+ char Fdprefix[]="/dev/fd/";
