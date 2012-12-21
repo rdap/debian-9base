@@ -1,3 +1,10 @@
+9base (1:6-6) unstable; urgency=low
+
+  * Add a watch file, thanks to Andy Simpkins <andy-debian@koipond.org.uk>
+    (Closes: #695163)
+
+ -- Gergely Nagy <algernon@madhouse-project.org>  Fri, 21 Dec 2012 13:21:20 +0100
+
 9base (1:6-5) unstable; urgency=low
 
   * New maintainer (Closes: #647092).
