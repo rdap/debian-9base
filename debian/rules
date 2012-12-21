@@ -1,27 +1,54 @@
 #!/usr/bin/make -f
 
-SHELL := sh -e
+SHELL  := sh -e
+PKGNAME = 9base
+PKGDIR  = debian/$(PKGNAME)
+PREFIX  = /usr/lib/plan9
+DATADIR = /usr/share
+MANDIR  = $(DATADIR)/man
+PKGDATA = $(DATADIR)/$(PKGNAME)
+TROFFDIR = $(PKGDATA)/troff
+MANEXT  = plan9
+
+CFLAGS += -c -I. -DPREFIX="\"$(PREFIX)\""
+
+# CFLAGS for troff
+CFLAGS += -DUNICODE -DDWBHOME="\"$(TROFFDIR)\"" -DNTERMDIR="\"/term/tab.\"" \
+	  -DTEXHYPHENS="\"/hyphen.tex\"" -DALTHYPHENS="\"/hyphen.tex\"" \
+	  -DFONTDIR="\"/font\"" -DTDEVNAME="\"utf\"" -DTMACDIR="\"/tmac/tmac.\""
 
 %:
 	dh ${@}
 
 override_dh_auto_build:
-	dh_auto_build -- LDFLAGS="" PREFIX=/usr/lib/plan9 MANPREFIX=/usr/share/man
+	dh_auto_build -- \
+		CFLAGS='$(CFLAGS) $(CPPFLAGS)' LDFLAGS='$(LDFLAGS)' \
+		PREFIX=$(PREFIX) MANPREFIX=$(MANDIR)
 
 override_dh_auto_install:
-	dh_auto_install -- DESTDIR=$(CURDIR)/debian/9base PREFIX=/usr/lib/plan9 MANPREFIX=/usr/share/man
+	dh_auto_install -- \
+		PREFIX=$(PREFIX) MANPREFIX=$(MANDIR) TROFFDIR=$(TROFFDIR)
 
-	mv debian/9base/usr/share/man/man1/getflags.1 \
-	   debian/9base/usr/share/man/man8/getflags.8
-	rm -f debian/9base/usr/share/man/man1/du.1
-	for MANPAGE in debian/9base/usr/share/man/man*/*; \
-	do \
-		mv $${MANPAGE} $$(dirname $${MANPAGE})/plan9-$$(basename $${MANPAGE}); \
-	done
+# delete unnecessary man pages
+	rm -f $(PKGDIR)$(MANDIR)/man1/du.1   # almost empty
+	rm -f $(PKGDIR)$(MANDIR)/man1/read.1 # identical to cat.1
+
+# delete empty man pages
 	find debian/9base/usr/share/man -type f -size 0b | xargs rm -f
+
+# Patch man pages on the fly:
+#  - Append plan9 to their extension & section
+#  - .PD0 -> .PD 0 to make groff happy
+	for MANPAGE in $(PKGDIR)$(MANDIR)/man*/*; do \
+		sed -i \
+			-e 's/^\.TH [^ ]* [1-8]/&$(MANEXT)/' \
+			-e 's/^\.PD0/\.PD 0/' \
+			$$MANPAGE; \
+		mv $$MANPAGE $${MANPAGE}$(MANEXT); \
+	done
 
 override_dh_fixperms:
 	dh_fixperms
 
-	chmod 0755 debian/9base/usr/lib/plan9/lib/troff/font/devutf/mkMAP
-	chmod 0755 debian/9base/usr/lib/plan9/lib/troff/tmac/sendcover
+	chmod 0755 $(PKGDIR)$(TROFFDIR)/font/devutf/mkMAP
+	chmod 0755 $(PKGDIR)$(TROFFDIR)/tmac/sendcover

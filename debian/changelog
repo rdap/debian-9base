@@ -4,8 +4,12 @@
     (Closes: #695163)
   * Use F_SETFD instead of F_SETFL to set FD_CLOEXEC, patch from Guillem
     Jover <guillem@debian.org> (Closes: #696247)
+  * Based on work by Sergey Romanov <schragge@gmail.com>:
+    + Move troff data to /usr/share/9base/troff.
+    + Various man page tweaks
+    + Move to debhelper compat level 9.
 
- -- Gergely Nagy <algernon@madhouse-project.org>  Fri, 21 Dec 2012 13:30:12 +0100
+ -- Gergely Nagy <algernon@madhouse-project.org>  Fri, 21 Dec 2012 14:50:06 +0100
 
 9base (1:6-5) unstable; urgency=low
 
