@@ -5,8 +5,8 @@ Build-Depends: debhelper (>= 9~)
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Standards-Version: 3.9.6
 Homepage: http://tools.suckless.org/9base
-Vcs-Browser: git://anonscm.debian.org/collab-maint/9base.git
-Vcs-Git: http://anonscm.debian.org/cgit/collab-maint/9base.git
+Vcs-Git: git://anonscm.debian.org/collab-maint/9base.git
+Vcs-Browser: http://anonscm.debian.org/cgit/collab-maint/9base.git
 
 Package: 9base
 Architecture: any
