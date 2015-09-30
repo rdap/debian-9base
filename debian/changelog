@@ -1,9 +1,9 @@
 9base (1:6-7) unstable; urgency=medium
 
+  * Orphaning the package.
   * Update the Vcs-* headers to point at collab-maint.
   * Update debian/copyright, to reflect my copyright assignment to SFC.
   * Bump Standards-Version to 3.9.6, no changes required.
-  * Orphan the package.
 
  -- Gergely Nagy <algernon@madhouse-project.org>  Wed, 30 Sep 2015 12:51:45 +0200
 
