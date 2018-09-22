@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+update-alternatives --remove rc /usr/lib/plan9/bin/rc
+
+#DEBHELPER#
+
+exit 0

@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+
+# use alternatives to avoid conflict with the other, incompatible 'rc' package,
+# and so we can maintain compatibility with rc scripts expecting /bin/rc
+update-alternatives --install /bin/rc rc /usr/lib/plan9/bin/rc 20
+
+# allow use of 9base' rc as a login shell:
+add-shell /bin/rc
+add-shell /usr/lib/plan9/bin/rc
+
+#DEBHELPER#
+
+exit 0

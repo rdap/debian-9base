@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "remove" ]; then
+    remove-shell /bin/rc
+    remove-shell /usr/lib/plan9/bin/rc
+fi
+
+#DEBHELPER#
